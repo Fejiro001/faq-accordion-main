@@ -4,6 +4,10 @@
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
   --hover-color: hsl(281, 83%, 54%);
+
+  --font-large: 2rem;
+  --font-medium: 1rem;
+  --font-small: .9rem;
 }
 
 @font-face {
@@ -130,9 +134,9 @@ article {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--font-large);
   padding-left: 1.5rem;
-  font-size: 700;
+  font-weight: 700;
 }
 
 details {
@@ -148,7 +152,7 @@ details[open] summary::before {
 
 summary {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--font-medium);
   cursor: pointer;
   list-style: none;
 }
@@ -169,7 +173,7 @@ summary::before {
 }
 
 .summary-content p {
-  font-size: .9rem;
+  font-size: var(--font-small);
   color: var(--grayish-purple);
 }
 
