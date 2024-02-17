@@ -3,6 +3,7 @@
   --light-pink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+  --hover-color: hsl(281, 83%, 54%);
 }
 
 @font-face {
@@ -52,7 +53,7 @@
     4. Improve text rendering
   */
 body {
-  line-height: 1.5;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -91,18 +92,15 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* .titleText::before {
-    content: url(assets/images/icon-star.svg);
-} */
+body {
+  background-color: var(--light-pink);
+}
 
 main {
   display: flex;
   background-image: url(assets/images/background-pattern-mobile.svg);
-  background-color: var(--light-pink);
   background-repeat: no-repeat;
   background-position: top;
-  /* background-size: 32rem; */
-  height: 100svh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -113,18 +111,25 @@ main {
 @media (min-width: 376px) {
   main {
     background-image: url(assets/images/background-pattern-desktop.svg);
-    /* background-size: 100rem; */
   }
 }
 
-section {
+article {
   background-color: var(--white);
-  padding: 1.5rem;
-  border-radius: 1rem;
+  padding-inline: 1.7rem;
+  margin: 9rem 1.3rem 1rem;
+  border-radius: 0.5rem;
+  max-width: 37.5rem;
+  /* box-shadow: 0 5px 30px var(--grayish-purple); */
 }
 
 .faqTitle {
   display: flex;
+  padding-top: 1.2rem;
+}
+
+.star {
+  width: 1.5rem;
 }
 
 h1 {
@@ -133,8 +138,53 @@ h1 {
   font-size: 700;
 }
 
+details {
+  padding-block: 1.3rem;
+  text-wrap: wrap;
+  text-align: balance;
+}
+
+details[open] summary::before {
+  content: url(./assets/images/icon-minus.svg);
+  transition: 100ms;
+}
+
 summary {
   font-weight: 600;
-  list-style: none;
+  font-size: 1rem;
   cursor: pointer;
+  list-style: none;
+}
+
+summary:hover {
+  color: #AD28EB;
+}
+
+summary::before {
+  content: url(./assets/images/icon-plus.svg);
+  position: relative;
+  float: right;
+  padding-left: 1rem;
+}
+
+.summary-content {
+  padding-top: 1.3rem;
+}
+
+.summary-content p {
+  font-size: .9rem;
+  color: var(--grayish-purple);
+}
+
+hr {
+  border: 1px solid var(--light-pink);
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
 }
