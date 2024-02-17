@@ -123,13 +123,14 @@ article {
   margin: 9rem 1.3rem 1rem;
   border-radius: 1rem;
   max-width: 37.5rem;
-  box-shadow: 0 0 20px var(--grayish-purple);
+  box-shadow: 0 10px 20px rgb(173, 173, 173);
 }
 
 @media (min-width: 376px) {
   article {
     padding-inline: 2.5rem;
     margin-top: 10.5rem;
+    padding-bottom: 1rem;
   }
 }
 
