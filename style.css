@@ -5,9 +5,11 @@
   --dark-purple: hsl(292, 42%, 14%);
   --hover-color: hsl(281, 83%, 54%);
 
-  --font-large: 2rem;
-  --font-medium: 1rem;
-  --font-small: .9rem;
+  --font-large: clamp(2rem, 4vw, 4rem);
+  --font-medium: clamp(1rem, 1.25vw, 2rem);
+  --font-small: clamp(.9rem, 1.115vw, 1.8rem);
+
+  --star-width: clamp(1.5rem, 2.8vw, 2.5rem);
 }
 
 @font-face {
@@ -119,9 +121,16 @@ article {
   background-color: var(--white);
   padding-inline: 1.7rem;
   margin: 9rem 1.3rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   max-width: 37.5rem;
-  /* box-shadow: 0 5px 30px var(--grayish-purple); */
+  box-shadow: 0 0 20px var(--grayish-purple);
+}
+
+@media (min-width: 376px) {
+  article {
+    padding-inline: 2.5rem;
+    margin-top: 10.5rem;
+  }
 }
 
 .faqTitle {
@@ -129,8 +138,14 @@ article {
   padding-top: 1.2rem;
 }
 
+@media (min-width: 376px) {
+  .faqTitle {
+    padding-top: 2rem;
+  }
+}
+
 .star {
-  width: 1.5rem;
+  width: var(--star-width);
 }
 
 h1 {
@@ -143,6 +158,12 @@ details {
   padding-block: 1.3rem;
   text-wrap: wrap;
   text-align: balance;
+}
+
+@media (min-width: 376px) {
+  details {
+    padding-block: 1.65rem;
+  }
 }
 
 details[open] summary::before {
@@ -172,6 +193,12 @@ summary::before {
   padding-top: 1.3rem;
 }
 
+@media (min-width: 376px) {
+  .summary-content {
+    padding-top: 1.8rem;
+  }
+}
+
 .summary-content p {
   font-size: var(--font-small);
   color: var(--grayish-purple);
@@ -182,10 +209,12 @@ hr {
 }
 
 footer {
+  margin-top: 1rem;
   text-align: center;
 }
 
 a {
   text-decoration: none;
+  color: var(--hover-color);
   font-weight: 700;
 }
