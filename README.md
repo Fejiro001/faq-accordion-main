@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL]()
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/responsive-faq-accordion-fvlP-h0S7M)
 - Live Site URL: [Live site URL](https://fejiro001.github.io/faq-accordion-main/)
 
 ## My process
